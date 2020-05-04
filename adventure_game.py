@@ -65,7 +65,7 @@ def the_cave():
     print_pause("You walk towards the cave.")
     print_pause("You peer cautiously inside.")
     print_pause("In the depths of the cave you spot something!")
-    response = valid_input("Would you like to fetch the object?"
+    response = valid_input("Would you like to fetch the object? \n"
         "Press '1' to fetch '2' to flee back to the field \n", "1", "2")
     if response == "1":
         print_pause("You pick up the mysterious object.")
