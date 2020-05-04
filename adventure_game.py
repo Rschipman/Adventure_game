@@ -165,4 +165,6 @@ def play_game():
     print_pause("You awaken and arise slowly.")
     print_pause(". . . ")
     intro()
+    
+start_game()
 
