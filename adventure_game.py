@@ -113,7 +113,7 @@ def the_house():
             the_village()
         else:
             print_pause("The noise nearly cripples you. "
-            "You stagger and weakly draw your sword")
+            "You stagger and struggle to keep your weapon in hand.")
             print_pause("Before you have a chance to strike you feel something forcefully strike your head")
             print_pause(". . . ")
             print_pause("You slowly awaken.")
