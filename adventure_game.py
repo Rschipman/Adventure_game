@@ -118,7 +118,7 @@ def the_house():
             print_pause(". . . ")
             print_pause("You slowly awaken.")
             print_pause("You rise to your feet.")
-            play_game()
+            intro()
     elif response == "2":
         print_pause("You flee, a chill deep in your bones.")
         restart()
