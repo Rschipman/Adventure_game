@@ -29,7 +29,7 @@ def restart():
      "lays a house shrouded in mystery . . . \n")
     print_pause("To your left a dark gloomy cave." )
     response = valid_input("What would you like to do? \n"
-     "Press '1' to return to your home village, '2' to investigate the cave", "1", "2")
+     "Press '1' to return to your home village, '2' to investigate the cave \n", "1", "2")
     if response == "1":
         the_village()
     elif response == "2":
