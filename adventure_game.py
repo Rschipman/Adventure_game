@@ -90,7 +90,11 @@ def the_field_cave():
         elif response == "2":
             the_village()
     else:
-        the_village()
+        response = valid_input("What would you like to do? \n" "Press '1' to approach the house '2' to flee home to your village", "1", "2" )
+        if response == "1":
+            the_house()
+        else:
+            the_village()
     
 
 def the_house():
