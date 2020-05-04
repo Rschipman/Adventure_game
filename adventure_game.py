@@ -159,7 +159,7 @@ def you_lose():
 def play_game():
     print_pause("'Thank goodness!'")
     print_pause("'You are our saviour from this awful beast!'")
-    print_pause("'You shall leave immediatley!'")
+    print_pause("'You shall leave immediately!'")
     print_pause("The man strikes you suddenly")
     print_pause("You fall unconcious.")
     print_pause("You awaken and arise slowly.")
