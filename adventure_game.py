@@ -90,7 +90,7 @@ def the_field_cave():
         elif response == "2":
             the_village()
     else:
-        response = valid_input("What would you like to do? \n" "Press '1' to approach the house '2' to flee home to your village", "1", "2" )
+        response = valid_input("What would you like to do? \n" "Press '1' to approach the house '2' to flee home to your village \n", "1", "2" )
         if response == "1":
             the_house()
         else:
@@ -105,11 +105,11 @@ def the_house():
     if response == "1":
         print_pause("Suddenly you are struck by an ear piercing screech!")
         if weapon_choice in holster:
-            print_pause("With no thought left in your mind, but the need for survival strong in your bones," 
+            print_pause("With no thought left in your mind, but the need for survival strong in your bones, " 
             "you draw your weapon with lighting speed")
             print_pause("The %s stops in their tracks!" % enemy_choice)
             print_pause("'NO! It can't be! Not %s!!' a goosebump inducing voice says. " % weapon_choice)
-            print_pause("The %s glares daggers in your heart before "
+            print_pause("The %s glares daggers in to your heart before "
             "fleeing in fear" % enemy_choice)
             win.append("victory")
             print_pause("You victoriously gather treasures scattered around the house " 
