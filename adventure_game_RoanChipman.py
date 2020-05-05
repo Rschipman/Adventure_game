@@ -181,7 +181,7 @@ def the_village():
 def start_game():
     print_pause("You a lowly farmer working the fields are approached by a"
                 " frail, sickly looking, old man.")
-    print_pause("He speaks quielty:")
+    print_pause("He speaks quietly:")
     response = valid_input("'Are you a brave soul in search of a dangerous"
                            " quest?' \n"
                            "Please press '1' for Yes or '2' for No \n", ["1",
