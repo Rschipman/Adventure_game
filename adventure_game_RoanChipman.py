@@ -16,16 +16,16 @@ def print_pause(message, delay = 2):
     time.sleep(int(delay))
 
 
-def valid_input(prompt, option1, option2):
+def valid_input(prompt, options = []):
     response = ""
-    while True:
+    valid = False
+    while not valid:
         response = input(prompt)
-        if response == option1:
+        if response == x:
+            valid = True
             break
-        elif response == option2:
-            break
-        else:
-            ("(Please enter '1' or '2')")
+        if not valid:
+            print_pause("Enter a valid choice")
     return response
 
 
@@ -36,7 +36,7 @@ def restart():
     print_pause("To your left a dark gloomy cave.")
     response = valid_input("What would you like to do? \n"
                            "Press '1' to return to your home village, '2' to"
-                           " investigate the cave \n", "1", "2")
+                           " investigate the cave \n", ["1", "2"])
     if response == "1":
         the_village()
     elif response == "2":
@@ -59,7 +59,7 @@ def intro():
 def the_field():
     response = valid_input("What would you like to do? \n"
                            "Press '1' to proceed towards the house "
-                           "Press '2' to investigate the cave \n", "1", "2")
+                           "Press '2' to investigate the cave \n", ["1", "2"])
 
     if response == "1":
         print_pause("You approach the house and knock confidently on the"
@@ -78,7 +78,7 @@ def the_cave():
     print_pause("In the depths of the cave you spot something!")
     response = valid_input("Would you like to fetch the object? \n"
                            "Press '1' to fetch '2' to flee back to"
-                           " the field \n", "1", "2")
+                           " the field \n", ["1", "2"])
     if response == "1":
         print_pause("You pick up the mysterious object.")
         print_pause("Behold! The %s!" % weapon_choice)
@@ -99,7 +99,7 @@ def the_field_cave():
         response = valid_input("Would you like to proceed to the house?\n"
                                "Press '1' to proceed to the house '2' to"
                                " return to you village with your new"
-                               " treasure \n", "1", "2")
+                               " treasure \n", ["1", "2"])
         if response == "1":
             print_pause("You continue to the house.")
             the_house()
@@ -108,7 +108,7 @@ def the_field_cave():
     else:
         response = valid_input("What would you like to do? \n"
                                "Press '1' to approach the house '2' to flee"
-                               " home to your village \n", "1", "2")
+                               " home to your village \n", ["1", "2"])
         if response == "1":
             the_house()
         else:
@@ -121,7 +121,7 @@ def the_house():
                 "observed")
     response = valid_input("Do you dare enter? \n"
                            "Press '1' to enter '2' to run back to the"
-                           " field \n", "1", "2")
+                           " field \n", ["1", "2"])
     if response == "1":
         print_pause("Suddenly you are struck by an ear piercing screech!")
         if weapon_choice in holster:
@@ -183,8 +183,8 @@ def start_game():
     print_pause("He speaks quielty:")
     response = valid_input("'Are you a brave soul in search of a dangerous"
                            " quest?' \n"
-                           "Please press '1' for Yes or '2' for No \n", "1",
-                           "2")
+                           "Please press '1' for Yes or '2' for No \n", ["1",
+                           "2"])
     if response == "1":
         play_game()
     elif response == "2":
@@ -210,7 +210,7 @@ def play_game():
 
 def replay_game():
     print_pause("Would you like to play again?")
-    response = valid_input( "Press '1' for YES '2' for NO\n", "1", "2")
+    response = valid_input( "Press '1' for YES '2' for NO\n", ["1", "2"])
     if response == "1":
         start_game()
     elif response == "2":
