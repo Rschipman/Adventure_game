@@ -11,12 +11,12 @@ weapon_choice = random.choice(weapon_list)
 enemy_choice = random.choice(enemy_list)
 
 
-def print_pause(message, delay = 2):
+def print_pause(message, delay=2):
     print(message)
     time.sleep(int(delay))
 
 
-def valid_input(prompt, options = []):
+def valid_input(prompt, options=[]):
     response = ""
     valid = False
     while not valid:
@@ -185,7 +185,7 @@ def start_game():
     response = valid_input("'Are you a brave soul in search of a dangerous"
                            " quest?' \n"
                            "Please press '1' for Yes or '2' for No \n", ["1",
-                           "2"])
+                                                                         "2"])
     if response == "1":
         play_game()
     elif response == "2":
@@ -209,9 +209,10 @@ def play_game():
     print_pause(". . . ")
     intro()
 
+
 def replay_game():
     print_pause("Would you like to play again?")
-    response = valid_input( "Press '1' for YES '2' for NO\n", ["1", "2"])
+    response = valid_input("Press '1' for YES '2' for NO\n", ["1", "2"])
     if response == "1":
         start_game()
     elif response == "2":
