@@ -21,11 +21,12 @@ def valid_input(prompt, options = []):
     valid = False
     while not valid:
         response = input(prompt)
-        if response == x:
-            valid = True
-            break
-        if not valid:
-            print_pause("Enter a valid choice")
+        for x in options:
+            if response == x:
+                valid = True
+                break
+            if not valid:
+                print_pause("Enter a valid choice")
     return response
 
 
