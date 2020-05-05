@@ -11,9 +11,9 @@ weapon_choice = random.choice(weapon_list)
 enemy_choice = random.choice(enemy_list)
 
 
-def print_pause(message):
+def print_pause(message, delay = 2):
     print(message)
-    time.sleep(2)
+    time.sleep(int(delay))
 
 
 def valid_input(prompt, option1, option2):
