@@ -48,8 +48,8 @@ def intro():
     print_pause("You spot your trusty, yet rusted, short sword on "
                 "the ground next to you and holster it. ")
     print_pause("You look around as you remember the cries of the "
-                "tortured townfolk you have been sent to save \n"
-                " from a vicious, unseen enemy.")
+                "tortured townfolk you have been sent to save\n"
+                "from a vicious, unseen enemy.")
     print_pause("Ahead of you, some distance away, \n"
                 "lays a house shrouded in mystery . . . ")
     print_pause("To your right a dark gloomy cave.")
