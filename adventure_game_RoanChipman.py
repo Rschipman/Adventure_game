@@ -25,8 +25,8 @@ def valid_input(prompt, options = []):
             if response == x:
                 valid = True
                 break
-            if not valid:
-                print_pause("Enter a valid choice")
+        if not valid:
+            print_pause("Enter a valid choice")
     return response
 
 
